@@ -24,6 +24,6 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
-      working-directory: ./02 - Getting Started/FirstProject
+      working-directory: ./02 - Getting Started/FirstProjectFailName
     - name: Test
       run: dotnet test --no-build --verbosity normal
