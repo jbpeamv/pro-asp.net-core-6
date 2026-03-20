@@ -15,6 +15,13 @@ namespace SportsStore.Controllers {
             signInManager = signInMgr;
         }
 
+        public IActionResult Test(string id)
+        {
+            var sql = "SELECT * FROM Users WHERE Id = " + id;
+            var cmd = new SqlCommand(sql);
+            return Ok();
+        }
+
         public ViewResult Login(string returnUrl) {
             return View(new LoginModel {
                 ReturnUrl = returnUrl
